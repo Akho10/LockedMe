@@ -20,31 +20,66 @@ public class Main {
 			switch(mainOption) {
 			//Retrieve files
 			case 1:
+				
 				break;
 				
 			//File manager (add,delete,search, back operations)	
 			case 2:
-				System.out.println("\n------Manage your files------\n");
-				System.out.println("1. Add file");
-				System.out.println("2. Delete file");
-				System.out.println("3. Search for file");
-				System.out.println("4. Back to main menu");
-				int submenuOption = scanner.nextInt();
 				
-				if (submenuOption == 1) {
+//				System.out.println("\n------Manage your files------\n");
+//				System.out.println("1. Add file");
+//				System.out.println("2. Delete file");
+//				System.out.println("3. Search for file");
+//				System.out.println("4. Back to main menu");
+//				int submenuOption = scanner.nextInt();
+//				
+//				if (submenuOption == 1) {
+//					//Add
+//					
+//				}else if (submenuOption == 2) {
+//					//Delete
+//					
+//				}else if (submenuOption == 3) {
+//					//Search
+//					
+//				}else if (submenuOption == 4){
+//					//Back
+//					
+//					
+//				}else {
+//					System.out.println("Invalid menu option. Please enter a valid option (1/2/3/4).");
+//				}
+				
+				boolean isSubmenuOption = true;
+				while(isSubmenuOption) {
+					System.out.println("\n------Manage your files------\n");
+					System.out.println("1. Add file");
+					System.out.println("2. Delete file");
+					System.out.println("3. Search for file");
+					System.out.println("4. Back to main menu");
+					int submenuOption = scanner.nextInt();
+					
+					switch(submenuOption) {
 					//Add
+					case 1:
+						break;
+						
+					//Delete	
+					case 2:
+						break;
 					
-				}else if (submenuOption == 2) {
-					//Delete
-					
-				}else if (submenuOption == 3) {
 					//Search
+					case 3:
+						break;
 					
-				}else if (submenuOption == 4){
 					//Back
+					case 4:
+						isSubmenuOption = false;
+						break;
 					
-				}else {
-					System.out.println("Invalid menu option. Please enter a valid option (1/2/3/4).");
+					default:
+						System.out.println("Invalid menu option. Please enter a valid option (1/2/3).");
+					}
 				}
 				
 				
@@ -52,8 +87,9 @@ public class Main {
 				
 			//Close program	
 			case 3:
-				break;
+				System.out.println("Closing program...");
 				
+				break;
 			default:
 				System.out.println("Invalid menu option. Please enter a valid option (1/2/3).");
 				
