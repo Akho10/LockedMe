@@ -62,6 +62,7 @@ public class Main {
 		}catch(InputMismatchException e) {
 			System.err.println("Invalid option. Please try again.");
 		}
+		scanner.close();
 	}
 
 }
