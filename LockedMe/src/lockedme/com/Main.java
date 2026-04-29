@@ -5,7 +5,10 @@ import java.util.InputMismatchException;
 public class Main {
 
 	public static void main(String[] args) {
+		
+		ArrayList<String> files = new ArrayList<>();
 		Scanner scanner = new Scanner(System.in);
+		Scanner scanner2 = new Scanner(System.in);
 		
 		try {
 			boolean isMainOption = true;
@@ -64,6 +67,10 @@ public class Main {
 						switch(submenuOption) {
 						//Add
 						case 1:
+							System.out.print("\nEnter name of your file: \n");
+							String fileName = scanner2.nextLine();	
+							files.add(fileName);
+							System.out.printf("\n The file %s has been added successfully.\n", fileName);
 							break;
 							
 						//Delete	
