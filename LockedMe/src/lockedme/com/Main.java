@@ -9,6 +9,7 @@ public class Main {
 		ArrayList<String> files = new ArrayList<>();
 		Scanner scanner = new Scanner(System.in);
 		Scanner scanner2 = new Scanner(System.in);
+		Scanner scanner3 = new Scanner(System.in);
 		
 		try {
 			boolean isMainOption = true;
@@ -60,6 +61,15 @@ public class Main {
 							
 						//Delete	
 						case 2:
+							System.out.print("\nEnter name of file you want to delete: \n");
+							String deleteFile = scanner3.nextLine();	
+							
+							if(files.contains(deleteFile)) {
+								files.remove(deleteFile);
+								System.out.print("\nFile deleted successfully.\n");
+							}else {
+								System.out.print("\nFile not found\n");
+							}
 							break;
 						
 						//Search
