@@ -25,11 +25,11 @@ public class Main {
 				switch(mainOption) {
 				//Retrieve files
 				case 1:
-					System.out.println("\nFile list: ");
+					System.out.println("\nFile list: \n");
 					if(files.isEmpty()) {
 						System.out.println("There are currently no files to display.");
 					}else {
-						
+						Collections.sort(files);
 						for(String file : files) {
 							System.out.println(file);
 						}
