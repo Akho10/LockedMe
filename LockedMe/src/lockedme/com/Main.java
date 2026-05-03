@@ -56,8 +56,13 @@ public class Main {
 						case 1:
 							System.out.print("\nEnter name of your file: \n");
 							String fileName = scanner2.nextLine();	
-							files.add(fileName);
-							System.out.printf("\n The file %s has been added successfully.\n", fileName);
+							if(files.contains(fileName)) {
+								System.out.print("\nFile already exists. Please enter different file name.\n");
+							}else {
+								files.add(fileName);
+								System.out.printf("\n The file %s has been added successfully.\n", fileName);
+							}
+							
 							break;
 							
 						//Delete	
