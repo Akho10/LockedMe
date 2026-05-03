@@ -10,6 +10,7 @@ public class Main {
 		Scanner scanner = new Scanner(System.in);
 		Scanner scanner2 = new Scanner(System.in);
 		Scanner scanner3 = new Scanner(System.in);
+		Scanner scanner4 = new Scanner(System.in);
 		
 		try {
 			boolean isMainOption = true;
@@ -74,6 +75,15 @@ public class Main {
 						
 						//Search
 						case 3:
+							System.out.println("Search for a file: ");
+							String searchFile = scanner4.nextLine();
+							
+							if(files.contains(searchFile)) {
+								System.out.println("\nFile found.\n");
+							}else
+							{
+								System.out.println("\nFile not found.\n");
+							}
 							break;
 						
 						//Back
@@ -109,6 +119,8 @@ public class Main {
 		}
 		scanner.close();
 		scanner2.close();
+		scanner3.close();
+		scanner4.close();
 	}
 
 }
